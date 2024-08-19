@@ -20,7 +20,7 @@ public class EncapsulationDemo {
 	}
 
 	public void setOrderNo(int orderNo) {
-		this.orderNo = orderNo;
+		this.orderNo = orderNo ;
 	}
 
 	public int getJersyNo() {
@@ -30,9 +30,21 @@ public class EncapsulationDemo {
 	public void setJersyNo(int jersyNo) {
 		this.jersyNo = jersyNo;
 	}
+	
+
+	@Override
+	public String toString() {
+		return "EncapsulationDemo [playerName = " + playerName + ", orderNo = " + orderNo + ", jersyNo = " + jersyNo + "]";
+	}
 
 	public static void main(String[] args) {
-
+		EncapsulationDemo obj = new EncapsulationDemo();
+		
+		obj.setPlayerName("Virat kohli");
+		obj.setJersyNo(18);
+		obj.setOrderNo(2);
+		
+		System.out.println(obj);
 	}
 
 }
